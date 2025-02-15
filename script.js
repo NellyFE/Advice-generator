@@ -1,14 +1,16 @@
 const diceBtn = document.getElementById("dice-div");
 const adviceContainer = document.getElementById("the-advice");
 const adviceNum = document.getElementById("num");
-
+const diceImage = document.getElementById("dice");
 const loadingSpinner = document.getElementById("loadingSpinner");
+// const spin = document.getElementById('spin');
 
 const adviceUrl =
   "https://proxy.corsfix.com/?https://api.adviceslip.com/advice";
 
 const fetchingAdvice = async () => {
   loadingSpinner.style.display = "block";
+  diceImage.style.display = "none";
   adviceContainer.innerText = ""; 
   adviceNum.innerText = "";
 
@@ -34,7 +36,10 @@ const fetchingAdvice = async () => {
   } finally {
     console.log("ran");
     loadingSpinner.style.display = "none";
+    diceImage.style.display = "block";
+
     diceBtn.disabled = false;
+    
   }
 };
 
