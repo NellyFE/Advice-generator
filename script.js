@@ -15,7 +15,12 @@ const fetchingAdvice = async () => {
 
   try {
     diceBtn.disabled = true;
-    const response = await fetch(adviceUrl);
+    const response = await fetch(adviceUrl, {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+      },
+    });
     if (response.ok) {
       const resData = await response.json();
       console.log(resData.slip.advice);
