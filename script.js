@@ -5,13 +5,12 @@ const diceImage = document.getElementById("dice");
 const loadingSpinner = document.getElementById("loadingSpinner");
 // const spin = document.getElementById('spin');
 
-const adviceUrl =
-  "https://api.adviceslip.com/advice";
+const adviceUrl = "https://api.adviceslip.com/advice";
 
 const fetchingAdvice = async () => {
   loadingSpinner.style.display = "block";
   diceImage.style.display = "none";
-  adviceContainer.innerText = ""; 
+  adviceContainer.innerText = "";
   adviceNum.innerText = "";
 
   try {
@@ -39,7 +38,6 @@ const fetchingAdvice = async () => {
     diceImage.style.display = "block";
 
     diceBtn.disabled = false;
-    
   }
 };
 
