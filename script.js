@@ -6,7 +6,7 @@ const loadingSpinner = document.getElementById("loadingSpinner");
 // const spin = document.getElementById('spin');
 
 const adviceUrl =
-  "https://proxy.corsfix.com/?https://api.adviceslip.com/advice";
+  "https://api.adviceslip.com/advice";
 
 const fetchingAdvice = async () => {
   loadingSpinner.style.display = "block";
